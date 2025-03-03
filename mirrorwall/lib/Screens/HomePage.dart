@@ -112,80 +112,83 @@ class _HomepageState extends State<Homepage> {
               ),
             ),
       body: SafeArea(
-        child: Column(
-          children: [
-            Padding(
-              padding: const EdgeInsets.all(10),
-              child: Text(
-                "Please Select Your Search Engine.",
-                style: TextStyle(
-                  fontSize: 18,
-                  fontWeight: FontWeight.bold,
-                  color: isDark ? Colors.white : Colors.black,
-                ),
-              ),
-            ),
-            Expanded(
-              child: Container(
-                color: isDark ? Colors.black : Colors.white,
+        child: Container(
+          color: isDark ? Colors.black : Colors.white,
+          child: Column(
+            children: [
+              Padding(
                 padding: const EdgeInsets.all(10),
-                child: GridView.builder(
-                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                    crossAxisCount: isAndroid ? 2 : 3,
-                    crossAxisSpacing: 10,
-                    mainAxisSpacing: 10,
-                    childAspectRatio: isAndroid ? 1.5 : 1.2,
+                child: Text(
+                  "Please Select Your Search Engine.",
+                  style: TextStyle(
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold,
+                    color: isDark ? Colors.white : Colors.black,
                   ),
-                  itemCount: displayItems.length,
-                  itemBuilder: (context, index) {
-                    BookMark item = displayItems[index];
-
-                    return GestureDetector(
-                      onTap: () {
-                        print("Tapped on ${item.Url}");
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) =>
-                                  WebViewPage(initialUrl: item.Url)),
-                        );
-                      },
-                      child: Card(
-                        elevation: 4,
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(10),
-                        ),
-                        color: isDark ? Colors.grey[800] : Colors.white,
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Image.network(
-                              item.Logo,
-                              width: 50,
-                              height: 50,
-                              errorBuilder: (context, error, stackTrace) =>
-                                  const Icon(Icons.image_not_supported,
-                                      size: 50),
-                            ),
-                            const SizedBox(height: 10),
-                            Text(
-                              item.Title,
-                              textAlign: TextAlign.center,
-                              style: TextStyle(
-                                fontSize: 16,
-                                fontWeight: FontWeight.bold,
-                                color: isDark ? Colors.white : Colors.black,
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    );
-                  },
                 ),
               ),
-            ),
-          ],
+              Expanded(
+                child: Container(
+                  color: isDark ? Colors.black : Colors.white,
+                  padding: const EdgeInsets.all(10),
+                  child: GridView.builder(
+                    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                      crossAxisCount: isAndroid ? 2 : 3,
+                      crossAxisSpacing: 10,
+                      mainAxisSpacing: 10,
+                      childAspectRatio: isAndroid ? 1.5 : 1.2,
+                    ),
+                    itemCount: displayItems.length,
+                    itemBuilder: (context, index) {
+                      BookMark item = displayItems[index];
+
+                      return GestureDetector(
+                        onTap: () {
+                          print("Tapped on ${item.Url}");
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) =>
+                                    WebViewPage(initialUrl: item.Url)),
+                          );
+                        },
+                        child: Card(
+                          elevation: 4,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                          color: isDark ? Colors.grey[800] : Colors.white,
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Image.network(
+                                item.Logo,
+                                width: 50,
+                                height: 50,
+                                errorBuilder: (context, error, stackTrace) =>
+                                    const Icon(Icons.image_not_supported,
+                                        size: 50),
+                              ),
+                              const SizedBox(height: 10),
+                              Text(
+                                item.Title,
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.bold,
+                                  color: isDark ? Colors.white : Colors.black,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      );
+                    },
+                  ),
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );

@@ -166,6 +166,11 @@ class _AllBookmarkPageState extends State<AllBookmarkPage> {
                         const SizedBox(height: 10),
                         Text(
                           item.Title,
+                          maxLines: 1,
+                          // Ensures only one line is shown
+                          overflow: TextOverflow.ellipsis,
+                          // Adds "..." if the text is too long
+                          textAlign: TextAlign.center,
                           style: TextStyle(
                             fontSize: 16,
                             fontWeight: FontWeight.bold,
