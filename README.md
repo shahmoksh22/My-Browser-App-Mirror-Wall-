@@ -39,7 +39,15 @@ My-Browser-App-Mirror-Wall is a **Flutter-based web browser** that provides a si
    - Toggle between **Light** and **Dark** themes from the settings page.
 
 ## Screenshots
-(Include relevant screenshots of your app here)
+
+<img src="https://github.com/shahmoksh22/My-Browser-App-Mirror-Wall-/blob/main/mirrorwall/screenshot/1.png" alt="Screenshot 1" width="200" height="400">
+<img src="https://github.com/shahmoksh22/My-Browser-App-Mirror-Wall-/blob/main/mirrorwall/screenshot/2.png" alt="Screenshot 2" width="200" height="400">
+<img src="https://github.com/shahmoksh22/My-Browser-App-Mirror-Wall-/blob/main/mirrorwall/screenshot/3.png" alt="Screenshot 3" width="200" height="400">
+<img src="https://github.com/shahmoksh22/My-Browser-App-Mirror-Wall-/blob/main/mirrorwall/screenshot/4.png" alt="Screenshot 4" width="200" height="400">
+<img src="https://github.com/shahmoksh22/My-Browser-App-Mirror-Wall-/blob/main/mirrorwall/screenshot/5.png" alt="Screenshot 5" width="200" height="400">
+<img src="https://github.com/shahmoksh22/My-Browser-App-Mirror-Wall-/blob/main/mirrorwall/screenshot/6.png" alt="Screenshot 6" width="200" height="400">
+<img src="https://github.com/shahmoksh22/My-Browser-App-Mirror-Wall-/blob/main/mirrorwall/screenshot/7.png" alt="Screenshot 7" width="200" height="400">
+<img src="https://github.com/shahmoksh22/My-Browser-App-Mirror-Wall-/blob/main/mirrorwall/screenshot/8.png" alt="Screenshot 8" width="200" height="400">
 
 ## Contributing
 
